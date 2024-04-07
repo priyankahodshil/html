@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="red1()">stop</button>
+    <button onclick="a1()">stop</button>
+    <button onclick="ok=setTimeout(c,500)">start</button>
+ <p id="demo"></p>
+    <script>
+
+let  boy=setTimeout(red,1000);
+
+function red()
+{
+  console.log("hi");
+}
+
+function red1()
+{
+  clearTimeout(boy);
+}
+
+
+let a=setTimeout(b,1000)
+function b()
+{
+    console.log("word")
+}
+function a1()
+{
+    clearTimeout(a)
+}
+
+let ok;
+function c()
+{
+    console.log("shagusta di")
+}
+function ok1()
+{
+        clearTimeout(ok);
+}
+
+let game=setInterval(up,1000)
+
+function up()
+{
+  document.getElementById("demo").innerHTML=(new Date().toLocaleTimeString())
+
+}
+    </script>
+</body>
+</html>

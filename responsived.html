@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .parent
+        {
+            
+            height: 550px;
+            width: 850px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            margin: auto;
+            padding: 10px;
+            gap: 5px;
+        }
+        .child
+        {
+            text-align: center;
+        }
+        .one
+        {
+            height: 50px;
+            width: 49.3%;
+            background-color: blue;
+        }
+        .two
+        {
+            height: 150px;
+            width: 99%;
+            background-color: orangered;
+        }
+        .three
+        {
+            height: 250px;
+            width: 32.5%;
+            background-color: green;
+        }
+        .four
+        {
+            height: 50px;
+            width: 24.3%;
+            background-color: red;
+        }
+   @media screen and (min-width:320px) and (max-width:767px) 
+    {
+        .parent{
+            height: 100%;
+            width: 100%;
+            display: flex;
+        }
+        .child
+        {
+            width: 100% !important;
+          
+        }
+   }
+   @media screen and (min-width:768px) and (max-width:1023px)
+    {   .parent
+        {
+            height: 100%;
+            width: 100%;
+            display: flex;
+        }
+        .child
+        {
+            width: 100%;
+        }
+        .four
+        {
+            width: 49.5%;
+        }
+    
+   }
+   @media screen and (min-width:1024px) and (max-width:1200px) {
+
+    .parent{
+     width: 100%;
+     height: 100%;
+     display: flex;
+    }
+    
+    
+   }
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child one">1</div>
+        <div class="child one">2</div>
+        <div class="child two">3</div>
+        <div class="child three">4</div>
+        <div class="child three">5</div>
+        <div class="child three">6</div>
+        <div class="child four">7</div>
+        <div class="child four">8</div>
+        <div class="child four">9</div>
+        <div class="child four">10</div>
+    </div>
+</body>
+</html>

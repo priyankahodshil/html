@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+    // simple
+     let num=10;
+     let prome=new Promise((resolve,reject)=>
+     {
+        if(num%2==0)
+        {
+            resolve("even")
+        }
+        else
+        {
+            reject("odd")
+        }
+     })
+     console.log(prome)
+
+
+
+    let get="fail";
+    let promi=new Promise((resolve,reject)=>{
+
+       setTimeout(()=>{
+        if(get=="fai")
+        {
+            resolve("sucess")
+        }
+        else
+        {
+            reject("fail")
+        }
+       },2000)
+    })
+    console.log(promi)
+
+    promi.then((y1)=>{
+      console.log(y1)
+    })
+    .catch((x1)=>{
+        console.log(x1)
+    });
+
+
+    function be(NUM )
+    {
+        return new Promise(function(resolve,reject){
+
+            if(NUM%2==0)
+            {
+                resolve(NUM);
+            }
+            else{
+                reject(NUM)
+            }
+        })
+
+    }
+    function red(org)
+    { square=org*org
+        console.log(square)
+    }
+    function red1(org)
+    {
+        console.log(org)
+    }
+    be(prompt("enter your number")).then(red).catch(red1)
+
+
+
+
+   function hellow(std)
+   {
+    return new Promise((resolve,reject)=>{
+        
+
+        setTimeout(() => {
+            if(std>=50)
+            {
+                resolve("great")
+            }
+            else
+            {
+                reject("not match")
+            }
+        }, 3000);
+    })
+   }
+
+   function p(resolve)
+   {
+     std=resolve*resolve*resolve;
+     console.log(std)
+   }
+   function p1(std)
+   {
+    console.log(std)
+   }
+
+hellow(45).then(p).catch(p1)
+
+
+
+
+function book(num)
+{
+    return new Promise((resolve,reject)=>{
+        let total=0,rem=0;
+      let org=num;
+        setTimeout(()=>{
+            while(num!=0)
+            {
+                rem=num%10;
+                total=total+rem*rem*rem;
+                num=parseInt(num/10)
+            }
+            if(total==org)
+            {
+                resolve("armstrong")
+            }
+            else
+            {
+                reject("not armstrong")
+            }
+        },5000)
+    })
+}
+
+function t1(str)
+{
+    console.log(str)
+}
+function y1(stdr)
+{
+    console.log(stdr)
+}
+console.log(new Date())
+book(prompt("enter your number ")).then(t1).catch(y1)
+
+
+
+    let good=9;
+
+let fun=new Promise(function(resolve,reject){
+
+    setTimeout(() => {
+
+
+        if(good!=490)
+        {
+            resolve(good);
+        }
+        else{
+            reject(good);
+        }
+        
+    }, 4000);
+})
+
+function best(good)
+{
+      square=good*good*good;
+      console.log(square); 
+}
+function and(good)
+{
+    console.log(good)
+}
+
+fun.then(best).catch(and);
+
+
+
+
+
+function my_fun(name)
+{
+    return new Promise(function (resolve,reject){
+
+        if(name!=0){
+
+            resolve(name);
+        }
+        else{
+            reject(name);
+        }
+
+    })
+}
+
+
+my_fun(prompt("enter your number ")).then(eat).catch(eat1);
+
+
+function eat(name)
+{
+    let std=name,org=name,rem=0,count=0,total=0,power=1;
+
+    
+    while(std!=0)
+    {
+        std=parseInt(std/10)
+        count++;
+    }
+    while(org!=0)
+    {
+        rem=org%10;
+        for(let i=1;i<=count;i++)
+        {
+            power=power*rem;
+        }
+        total=total+power;
+        org=parseInt(org/10);
+        power=1;
+    }
+
+    if(total==name)
+    {
+        console.log(`armstrong ${name}`);
+    }
+    else{
+        console.log(" not armstong");
+    }
+}
+function eat1(name){
+    console.log(name)
+}
+
+ </script>
+</body>
+</html>
